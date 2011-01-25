@@ -1,6 +1,7 @@
 " Vim syntax file
-" Language: TODO
-" Author:   Magnus Woldrich <trapd00r@trapd00r.se>
+" Language:     TODO
+" Author:       Magnus Woldrich <trapd00r@trapd00r.se>
+" Contributor:  Marcus Carlsson <hi@xintron.se>
 
 if version < 600
 	syntax clear
@@ -13,8 +14,8 @@ syn match  todoinprogress  /INPROGRESS/
 syn match  todotodo        /TODO/
 syn match  todosomewhat    /SOMEWHAT/
 syn match  todonote        /NOTE/
-syn match  tododate        /\(Mon\|Tue\|Wed\|Thu\|Fri\|Sat\|Sun\)\s\(Jan\|Feb\|Mar\|Apr\|May\|Jun\|Jul\|Aug\|Sep\|Oct\|Nov\|Dec\) \d\{2}/
-syn match  todotime        /\d\{2}:\d\{2}:\d\{2} .\{3,} \d\{4}/
+syn match  tododate        /\(\(Mon\|Tue\|Wed\|Thu\|Fri\|Sat\|Sun\)\s\)\?\(Jan\|Feb\|Mar\|Apr\|May\|Jun\|Jul\|Aug\|Sep\|Oct\|Nov\|Dec\) \d\{2}/
+syn match  todotime        /\d\{2}:\d\{2}:\d\{2} \(.\{3,} \)\?\d\{4}/
 syn region done            start=/\*\*DONE/ end=/\*\*/
 syn region inprogress      start=/\*\*INPROGRESS/ end=/\*\*/
 syn region matttodo        start=/\*\*TODO/ end=/\*\*/
