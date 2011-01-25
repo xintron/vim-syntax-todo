@@ -13,6 +13,7 @@ syn match  tododone        /DONE/
 syn match  todoinprogress  /INPROGRESS/
 syn match  todotodo        /TODO/
 syn match  todosomewhat    /SOMEWHAT/
+syn match  todoidea        /IDEA/
 syn match  todonote        /NOTE/
 syn match  tododate        /\(\(Mon\|Tue\|Wed\|Thu\|Fri\|Sat\|Sun\)\s\)\?\(Jan\|Feb\|Mar\|Apr\|May\|Jun\|Jul\|Aug\|Sep\|Oct\|Nov\|Dec\) \d\{2}/
 syn match  todotime        /\d\{2}:\d\{2}:\d\{2} \(.\{3,} \)\?\d\{4}/
@@ -35,6 +36,10 @@ if !exists("did_todo_syntax_inits")
   hi link todosomewhat tSomewhat
     hi link somewhat tSomewhat
     hi default tSomewhat ctermfg=208
+
+  hi link todoidea tIdea
+    hi link idea tIdea
+    hi default tIdea ctermfg=94
 
   hi link todoinprogress tProgress
     hi link inprogress tProgress
