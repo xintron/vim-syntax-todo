@@ -21,6 +21,7 @@ syn region done            start=/\*\*DONE/ end=/\*\*/
 syn region inprogress      start=/\*\*INPROGRESS/ end=/\*\*/
 syn region matttodo        start=/\*\*TODO/ end=/\*\*/
 syn region majorpoint      start=/==>/ end=/-->/me=s-3 contains=ALL
+syn region subpointdone    start=/^x'[-=]\{2,3\}>/ end=/$/ contains=ALL
 syn region comment         start=/#/ end=/\n/
 syn match  minorpoint      /'-->/
 syn match  minipoint       /'--->/
@@ -51,6 +52,9 @@ if !exists("did_todo_syntax_inits")
 
   hi link majorpoint tMajor
     hi default tMajor ctermfg=196
+
+  hi link subpointdone tSubdone
+    hi default tSubdone ctermfg=154
 
   hi link todonote tTodonote
     hi default tTodonote ctermfg=197 cterm=bold
